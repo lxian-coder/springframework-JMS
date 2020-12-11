@@ -14,8 +14,11 @@ import org.springframework.jms.support.converter.MessageType;
 @Configuration
 public class JmsConfig {
 
-    @Bean
+    public static final String MY_QUEUE = "my-hello-world";
 
+
+
+    @Bean
     public MessageConverter messageConverter(){
         // MappingJackson2MessageConverter specifically for working with the
         // Jackson JSON library. Spring is doing when we send a message to JMS
